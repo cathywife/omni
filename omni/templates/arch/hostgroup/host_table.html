@@ -1,0 +1,11 @@
+{% if host_obj_list %}
+{% for host_obj in host_obj_list %}
+<tr>
+  <td>{{ host_obj.name }}</td>
+  <td>{{ host_obj.nic0_ip }}</td>
+  <td>{{ host_obj.use_status }}</td>
+</tr>
+{% endfor %}
+{% else %}
+<tr><td>无数据</td><td>无数据</td><<td>无数据</td>/tr>
+{% endif %}

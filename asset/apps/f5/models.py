@@ -73,7 +73,7 @@ class HostNodeModel(models.Model):
             return self.hostname
 
     class Meta:
-        db_table = 'host_node'
+        db_table = 'arch'
 
 
 class HostNodeOSModel(models.Model):

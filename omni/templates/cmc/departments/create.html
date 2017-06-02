@@ -1,0 +1,18 @@
+{% extends 'base/base_form.html' %}
+{% load static %}
+
+
+{% block form_button %}
+<div class="box-footer">
+  <button type="button" id="CancelButton" class="btn btn-default col-xs-offset-3 col-sm-offset-3 col-md-offset-3">返  回</button>
+  <button type="button" id="SubmitButton" class="btn btn-primary col-xs-offset-3 col-sm-offset-3 col-md-offset-3">创  建</button>
+</div>
+{% endblock form_button %}
+<!-- /.box-footer -->
+
+{% block page_embed_body_js %}
+  {% get_static_prefix as STATIC_PREFIX %}
+  <script src="{{ STATIC_PREFIX }}js/common/notify.js"></script>
+  <script src="{{ STATIC_PREFIX }}js/cmc/department/create.js"></script>
+{% endblock %}
+

@@ -9,7 +9,7 @@ from __future__ import print_function, unicode_literals, division, absolute_impo
 
 import logging
 from omni.apps import ByIdentityResourceBaseMixin
-from omni.apps.host_node.models import HostNodeTemplateModel
+from omni.apps.arch.models import HostNodeTemplateModel
 
 log = logging.getLogger(__name__)
 

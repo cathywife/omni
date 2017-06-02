@@ -1,0 +1,80 @@
+{% extends 'base/base_form.html' %}
+{% load static %}
+
+
+{% block form_button %}
+<div class="box-footer">
+  <button type="button" id="CancelButton" class="btn btn-default col-xs-offset-3 col-sm-offset-3 col-md-offset-3">返  回</button>
+  <button type="button" id="UpdateButton" class="btn btn-primary col-xs-offset-3 col-sm-offset-3 col-md-offset-3">更  新</button>
+</div>
+{% endblock form_button %}
+<!-- /.box-footer -->
+
+{% block page_embed_body_js %}
+  {% get_static_prefix as STATIC_PREFIX %}
+  <script src="{{ STATIC_PREFIX }}js/common/update.js"></script>
+  <script>
+
+var appid_url = "{% url 'restapi-arch:appid-detail' pk %}";
+
+$($.get(appid_url, function (appid_info) {
+    init_object_detail(appid_info);
+
+    $("#{{ form.product.id_for_label }}").selectize(selectize_init_for_select(
+        {options: appid_info.product},
+        {url: "{% url 'restapi-arch:product-list_create' %}"}
+        )
+    );
+
+    $("#{{ form.project.id_for_label }}").selectize(selectize_init_for_select(
+        {options: appid_info.project, maxItems: 1000},
+        {url: "{% url 'restapi-arch:project-list_create' %}"}
+        )
+    );
+
+    $("#{{ form.owner.id_for_label }}").selectize(selectize_init_for_select(
+        {options: appid_info.owner},
+        {url: "{% url 'restapi-cmc:user-list_create' %}"}
+        )
+    );
+
+    $("#{{ form.dev_department.id_for_label }}").selectize(selectize_init_for_select(
+        {options: appid_info.dev_department},
+        {url: "{% url 'restapi-cmc:department-list_create' %}"}
+        )
+    );
+    })
+);
+
+$("#UpdateButton").click(function () {
+    var form_obj = $("#{{ form.get_form_name }}");
+    var form_data = form_obj.serializeArray();
+    var post_data = $.each(form_data, function (index, field_obj) {
+        var data = {};
+        data[field_obj.name] = field_obj.value;
+        return data
+    });
+
+    $.ajax({
+        url: appid_url,
+        type: 'patch',
+        //contentType: 'application/json',
+        data: post_data,
+        cache: true,
+        error: function (response_obj, status, errorThrown) {
+            alert_failed_for_form(response_obj, status, appid_url, form_obj)
+        },
+        success: function (data, textStatus, jqXHR) {
+            alert_success_for_form('成功!!', '添加项目成功!!', appid_url, data.name, form_obj)
+        }
+    })
+
+});
+
+$("#CancelButton").click(function () {
+    window.location.reload();
+});
+
+  </script>
+{% endblock %}
+

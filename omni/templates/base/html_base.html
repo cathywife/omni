@@ -35,13 +35,22 @@
     {% block full_css %}
 
     {# common_css block: 通用CSS文件配置 #}
-    {% block common_css %}
+    {% block global_css %}
     <!-- Bootstrap -->
-    <link href="{% get_static_prefix  %}AdminLTE/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% get_static_prefix %}AdminLTE/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Font-Awesome -->
+    <link href="{% get_static_prefix %}plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    {% endblock %}
+
+    {% block base_css %}
     {% endblock %}
 
     {# extra_css block: 额外的CSS文件 #}
     {% block extra_css %}
+    {% endblock %}
+
+    {# custom_css block: 用户自定义的CSS文件 #}
+    {% block custom_css %}
     {% endblock %}
 
     {% endblock %} {# end full_css block #}
@@ -76,16 +85,22 @@
     {# page_body_full_js block: 页面全部JS配置 #}
     {% block page_body_full_js %}
 
-    {% block page_body_common_js %}
-    <!-- jQuery Version 2.1.4 -->
-    <script src="{% get_static_prefix  %}AdminLTE/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    {% block page_body_global_js %}
+    <!-- jQuery Version -->
+    <script src="{% get_static_prefix  %}AdminLTE/plugins/jQuery/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="{% get_static_prefix  %}AdminLTE/bootstrap/js/bootstrap.min.js"></script>
     {% endblock %}
 
+    {% block page_body_base_js %}
+    {% endblock %}
+
+      <!-- 扩展插件 -->
     {% block page_extra_body_js %}
 
     {% endblock %}
+
+    <!-- 内嵌脚本 -->
     {% block page_embed_body_js %}
     {% endblock %}
 

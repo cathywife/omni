@@ -13,6 +13,20 @@ from django.forms.utils import ErrorList
 from django.utils.html import format_html, format_html_join
 
 
+def bootstrap_form_decorator(form_class):
+    """
+    修改form的所有field的widget的属性,增加widget的"class"属性值"form-control",以支持bootstrap样式.
+    :param form_class:
+    :return:
+    """
+    for field_name in form_class.base_fields:
+        form_class.base_fields[field_name].widget.attrs.update({
+            'class': 'form-control ' + form_class.base_fields[field_name].widget.attrs.get('class', '')
+        })
+
+    return form_class
+
+
 class BootstrapFormStyles(object):
     """
     Form的公共样式类
@@ -62,7 +76,7 @@ class BootstrapFormStyles(object):
 
                 if bf.label:
                     label = conditional_escape(force_text(bf.label))
-                    label = bf.label_tag(label, attrs={'class': 'col-sm-2 col-md-2 col-lg-1 control-label'}) or ''
+                    label = bf.label_tag(label, attrs={'class': 'col-sm-2 col-md-2 col-lg-2 control-label'}) or ''
                 else:
                     label = ''
 
@@ -109,19 +123,6 @@ class BootstrapFormStyles(object):
                 # hidden fields.
                 output.append(str_hidden)
         return mark_safe('\n'.join(output))
-
-
-def bootstrap_form_decorator(form_class):
-    """
-    修改form的所有field的widget的属性,增加widget的"class"属性值"form-control",以支持bootstrap样式.
-    :param form_class:
-    :return:
-    """
-    for field_name in form_class.base_fields:
-        form_class.base_fields[field_name].widget.attrs.update({
-            'class': 'form-control ' + form_class.base_fields[field_name].widget.attrs.get('class', '')
-        })
-    return form_class
 
 
 class BootstrapErrorList(ErrorList):

@@ -8,8 +8,8 @@ Created on 2015年2月11日
 from __future__ import print_function, unicode_literals, division, absolute_import
 
 
-from omni.apps.host_node.mixin.models import BaseHostNodeMixin
-from omni.apps.host_node.management import ManagementNode
+from omni.apps.arch.mixin.models import BaseHostNodeMixin
+from omni.apps.arch.management import ManagementNode
 
 
 class ManagementNodeMixin(BaseHostNodeMixin):

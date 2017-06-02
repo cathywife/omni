@@ -1,0 +1,57 @@
+{% extends 'base/base_form.html' %}
+{% load static %}
+
+
+{% block page_body_content_article %}
+  <div class="box box-primary">
+    <div class="box-header with-border">
+      <h3 class="box-title">{{ body_header_navigation.page }}</h3>
+    </div>
+    <div class="box-body">
+      <!-- form start -->
+      <form id="{{ cluster_template_form.get_form_name }}" class="form-horizontal">
+          {{ cluster_template_form.as_bootstrap }}
+        <!-- /.box-body -->
+      </form>
+    </div>
+
+      <div class="box-footer">
+        <button type="button" id="CancelButton" class="btn btn-default col-xs-offset-3 col-sm-offset-3 col-md-offset-3">返  回</button>
+        <button type="button" id="SubmitButton" class="btn btn-primary col-xs-offset-3 col-sm-offset-3 col-md-offset-3">创  建</button>
+      </div>
+  </div>
+
+{% endblock %}
+
+
+{% block page_embed_body_js %}
+  <script>
+
+var clusters_templates_url = '{% url "template-arch:cluster-template-list" %}';
+var clusters_templates_restapi_url = "{% url 'restapi-arch:cluster-template-list_create' %}"
+
+$("#SubmitButton").click(function () {
+    var form_obj = $("#ClusterTemplateForm");
+    var form_data = form_obj.serializeArray();
+    var post_data = $.each(form_data, function (index, field_obj) {
+        var data = {};
+        data[field_obj.name] = field_obj.value;
+        return data
+    });
+
+    $.post(clusters_templates_restapi_url, post_data, function (data) {
+        alert_success_for_form('成功', '添加集群模板成功!!', clusters_templates_url + data.id + '/', data.name, form_obj)
+    }).fail(function (response_obj, status) {
+        alert_failed_for_form(response_obj, status, clusters_templates_restapi_url, form_obj)
+    });
+
+});
+
+$("#CancelButton").click(function () {
+    window.location.reload();
+});
+
+
+  </script>
+{% endblock %}
+

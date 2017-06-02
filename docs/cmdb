@@ -1,0 +1,21 @@
+新增  主机组与应用关系表(rl_hosts_app): 以泳道主机组为唯一键, app_id列为列表类型.
+    host_group: 字符串, 唯一键, 关联泳道与主机组关系表
+    app_id: 列表, 关联应用信息表
+
+变更  泳道与主机关系表: 表名: 泳道与主机组关系表, 同一主机组不能同时位于多个泳道内.
+    删除guid字段
+    删除app_id字段
+    增加: project字段
+新增  项目与泳道关系表(rl_project_channel): 项目拥有或存在于哪些泳道, 且有哪些app_id存在于该泳道内.
+    project: 字符串, 关联项目字典表
+    channel: 字符串, 关联泳道信息表
+    app_id: 列表, 关联应用信息表
+变更  主机组信息表
+    增加: is_channel_group字段: 是否属于泳道主机组
+
+新增  灰度主机组信息表(gray_hosts)
+    gray_group_name: 主机组名, 命名规则 {hostgroup_name}-[\d{1,3}], 唯一键
+    host_group: 主机组名
+    hosts: 主机列表
+
+

@@ -1,0 +1,71 @@
+{% extends 'base/base_list.html' %}
+{% load static %}
+
+{% block page_body_content_article %}
+  <div class="box box-primary">
+    <div class="box-header with-border">
+      <h3 class="box-title">{{ body_header_navigation.page }}</h3>
+    </div>
+    <div class="box-body">
+      <div class="table-responsive">
+        {% block box_body_table %}
+        <table id="{{ table_name|default:'table_list' }}" class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <td>ID</td>
+              <td>Name</td>
+              <td>显示名称</td>
+              <td>所属产品</td>
+              <td>所属部门</td>
+              <td>Owner</td>
+              <td>运维小组</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      {% endblock %}
+      {% block box_body_table_pagination %}
+      <div class="box-footer">
+        <ul id="{{ table_name|default:'table_list' }}Pagination" class="pull-right">
+        </ul>
+      </div>
+      {% endblock %}
+      </div>
+    </div>
+    <!-- /.box-footer -->
+  </div>
+
+{% endblock %}
+
+{% block page_embed_body_js %}
+<script>
+
+var appids_url = '{% url "restapi-arch:appid-list" %}';
+
+var $pagination = $('#{{ table_name|default:"table_list" }}Pagination');
+
+pagination_wrapper({pagination: $pagination, dataSource: appids_url, callback: function (data) {
+    var $appid_tbody = $('#{{ table_name|default:"table_list" }} tbody');
+    $appid_tbody.children('tr').remove();
+    $.each(data, function (i, appid_info) {
+        if (!appid_info){
+            return true
+        }
+        var td_list = [];
+        td_list.push(table_gen_td(appid_info, 'id'));
+        td_list.push(table_gen_td(appid_info, 'name'));
+        td_list.push(table_gen_td(appid_info, 'visible_name'));
+        td_list.push(table_gen_td(appid_info, 'product', 'name', true));
+        td_list.push(table_gen_td(appid_info, 'dev_department', 'visible_name', true));
+        td_list.push(table_gen_td(appid_info, 'owner', 'name', true));
+
+        td_list.push('<td><a href="{% url "template-arch:appid-list" %}' + appid_info.id + '/update/" class="btn btn-primary btn-xs">编 辑</a></td>');
+        $appid_tbody.append('<tr>' + td_list.join('') + ' </tr>')
+    });
+}});
+
+  </script>
+{% endblock %}

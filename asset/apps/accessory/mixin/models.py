@@ -8,8 +8,8 @@ Created on 2015年2月9日
 from __future__ import print_function, unicode_literals, division, absolute_import
 
 import logging
-from omni.apps.host_node.models import HostNodeModel
-from omni.apps.host_node.base import BaseHostNode
+from omni.apps.arch.models import HostNodeModel
+from omni.apps.arch.base import BaseHostNode
 from omni.apps.host_group.mixin.models import BaseHostGroupMixin
 
 

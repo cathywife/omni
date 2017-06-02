@@ -30,7 +30,7 @@ class IDCModel(models.Model):
         return self.name
 
     class Meta:
-        db_table = 'asset_facilitator_'
+        db_table = 'asset_facilitator_idc'
 
 
 class DistributorModel(models.Model):

@@ -1,0 +1,11 @@
+{% if hostgroup_list %}
+<tbody>
+{% for hostgroup in hostgroup_list %}
+<tr>
+  <td>{{ hostgroup.name }}</td>
+</tr>
+{% endfor %}
+</tbody>
+{% else %}
+<tbody><tr><td>无数据</td></tr></tbody>
+{% endif %}

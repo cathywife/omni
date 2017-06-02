@@ -1,0 +1,56 @@
+{% extends 'base/base_form.html' %}
+{% load static %}
+
+{% block page_embed_body_js %}
+{% get_static_prefix as STATIC_PREFIX %}
+<script src='{{ STATIC_PREFIX }}js/common/select2.js'></script>
+<script>
+
+$("#{{ form.name.id_for_label }}").selectize(selectize_init_for_text());
+
+$("#{{ form.product.id_for_label }}").selectize(selectize_init_for_select(
+    {},
+    {url: "{% url 'restapi-arch:product-list_create' %}"}
+    )
+);
+
+$("#{{ form.swimlane.id_for_label }}").selectize(selectize_init_for_select(
+    {},
+    {url: "{% url 'restapi-arch:swimlanes-list' %}"}
+    )
+);
+
+$("#{{ form.dev_department.id_for_label }}").selectize(selectize_init_for_select(
+    {},
+    {url: "{% url 'restapi-cmc:department-list_create' %}"}
+    )
+);
+
+
+var projects_url = "{% url 'restapi-arch:project-list_create' %}";
+
+$("#SubmitButton").click(function () {
+    var form_obj = $("#{{ form.get_form_name }}");
+    var form_data = form_obj.serializeArray();
+    var post_data = $.each(form_data, function (index, field_obj) {
+        var data = {};
+        data[field_obj.name] = field_obj.value;
+        return data
+    });
+
+    $.post(projects_url, post_data, function (data) {
+        alert_success_for_form('成功!!', '添加项目成功!!', '{% url "template-arch:project-list" %}' + data.id + '/',
+            data.name, form_obj)
+    }).fail(function (response_obj, status) {
+        alert_failed_for_form(response_obj, status, projects_url, form_obj)
+    });
+
+});
+
+$("#CancelButton").click(function () {
+    window.location.reload();
+});
+
+</script>
+{% endblock %}
+

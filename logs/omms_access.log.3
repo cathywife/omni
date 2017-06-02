@@ -1,0 +1,1085 @@
+ERROR    2016-11-01 00:19:52,019 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 697, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 655, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 405, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 332, in _iterencode_list
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <ProductModel: eleme> is not JSON serializable
+ERROR    2016-11-01 00:20:50,707 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 697, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 655, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 405, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 332, in _iterencode_list
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <ProductModel: eleme> is not JSON serializable
+ERROR    2016-11-01 00:21:10,504 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 697, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 655, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 405, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 332, in _iterencode_list
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <ProductModel: ProductModel object> is not JSON serializable
+ERROR    2016-11-01 00:21:17,058 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 697, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 655, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 405, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 332, in _iterencode_list
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <ProductModel: ProductModel object> is not JSON serializable
+ERROR    2016-11-01 00:41:32,157 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 697, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 655, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 405, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 332, in _iterencode_list
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <ProductModel: ProductModel object> is not JSON serializable
+ERROR    2016-11-01 00:43:19,255 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 697, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 631, in get_context
+    raw_data_put_form = self.get_raw_data_form(data, view, 'PUT', request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 553, in get_raw_data_form
+    content = renderer.render(serializer.data, accepted, context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <ProductModel: ProductModel object> is not JSON serializable
+ERROR    2016-11-01 00:43:40,956 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 283, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 58, in retrieve
+    raise ValueError(serializer)
+ValueError: AppIdModelSerializer(<AppIdModel: AppIdModel object>, context={u'view': <omni.apps.arch.views.product.AppIdDetailAPIView object>, u'request': <rest_framework.request.Request object>, u'format': None}):
+    id = IntegerField(label='ID', read_only=True)
+    create_time = DateTimeField(help_text='\xe5\x88\x9b\xe5\xbb\xba\xe6\x97\xb6\xe9\x97\xb4', read_only=True)
+    update_time = DateTimeField(help_text='\xe6\x9b\xb4\xe6\x96\xb0\xe6\x97\xb6\xe9\x97\xb4', read_only=True)
+    name = CharField(help_text='AppId\u7684\u552f\u4e00\u6807\u8bc6\u540d\u79f0', label='AppId\u540d\u79f0', max_length=100, validators=[<UniqueValidator(queryset=AppIdModel.objects.all())>])
+    visible_name = CharField(allow_blank=True, help_text='\u5b8c\u6574\u7684AppID\u540d\u79f0\u3001\u4e2d\u6587\u540d\u79f0, \u7528\u4e8e\u5c55\u793a', label='\u663e\u793a\u540d\u79f0', max_length=200, required=False)
+    life_cycle = IntegerField(allow_null=True, help_text='\u751f\u547d\u5468\u671f\u9636\u6bb5: \u7533\u8bf7, \u521d\u59cb, \u670d\u5f79, \u8f6c\u79fb, \u5e9f\u5f03', label='\u751f\u547d\u5468\u671f', max_value=32767, min_value=-32768, required=False)
+    app_arch = IntegerField(allow_null=True, help_text='\u9009\u62e9\u5e94\u7528\u67b6\u6784\u7c7b\u578b', label='\u5e94\u7528\u6846\u67b6', max_value=32767, min_value=-32768, required=False)
+    thrift_port = IntegerField(allow_null=True, help_text='\u7528\u4e8ethrift\u534f\u8bae\u901a\u4fe1\u7684\u7aef\u53e3\u53f7, \u82e5\u4e0d\u5b58\u5728, \u8bf7\u7559\u7a7a', label='Thrift\u7aef\u53e3\u53f7', max_value=4294967295, min_value=0, required=False)
+    http_port = IntegerField(allow_null=True, help_text='\u7528\u4e8eHTTP\u534f\u8bae\u901a\u4fe1\u7684\u7aef\u53e3\u53f7, \u82e5\u4e0d\u5b58\u5728, \u8bf7\u7559\u7a7a', label='HTTP\u534f\u8bae\u7aef\u53e3\u53f7', max_value=4294967295, min_value=0, required=False)
+    monitor_port = IntegerField(allow_null=True, help_text='\u7528\u4e8e\u76d1\u63a7\u7528\u9014\u7684\u7aef\u53e3\u53f7, \u82e5\u4e0d\u5b58\u5728, \u8bf7\u7559\u7a7a', label='\u76d1\u63a7\u7aef\u53e3', max_value=4294967295, min_value=0, required=False)
+    udp_port = IntegerField(allow_null=True, help_text='\u7528\u4e8eUDP\u7c7b\u578b\u7684\u7aef\u53e3\u53f7, \u82e5\u4e0d\u5b58\u5728, \u8bf7\u7559\u7a7a', label='Udp\u7aef\u53e3\u53f7', max_value=4294967295, min_value=0, required=False)
+    product = FullObjectPrimaryKeyRelatedField(allow_null=True, help_text='\u9009\u62e9AppId\u6240\u5c5e\u7684\u4ea7\u54c1', label='\u6240\u5c5e\u4ea7\u54c1', queryset=ProductModel.objects.all(), required=False)
+    project = FullObjectPrimaryKeyRelatedField(allow_null=True, help_text='\u9009\u62e9AppId\u6240\u5c5e\u7684\u9879\u76ee', label='\u6240\u5c5e\u9879\u76ee', queryset=ProjectModel.objects.all(), required=False)
+    owner = FullObjectPrimaryKeyRelatedField(allow_null=True, help_text='\u9879\u76ee\u8d23\u4efb\u4eba, \u9879\u76ee\u63d0\u8bae\u3001\u7acb\u9879\u3001\u5f00\u53d1\u3001\u7ef4\u62a4\u4eba\u5458', label='\u9879\u76eeOwner', queryset=UserModel.objects.all(), required=False)
+    dev_department = FullObjectPrimaryKeyRelatedField(allow_null=True, help_text='\u9009\u62e9AppId\u7684owner\u90e8\u95e8', label='\u6240\u5c5e\u90e8\u95e8', queryset=UserDepartmentModel.objects.all(), required=False)
+ERROR    2016-11-01 00:44:44,912 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 283, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 58, in retrieve
+    raise ValueError(serializer.data)
+ValueError: {'monitor_port': None, 'project': OrderedDict([(u'id', 1L), ('create_time', datetime.datetime(2016, 10, 31, 15, 59, 29, 999083, tzinfo=<UTC>)), ('update_time', datetime.datetime(2016, 10, 31, 15, 59, 29, 999137, tzinfo=<UTC>)), ('name', u'waimai'), ('visible_name', u'\u5916\u5356\u5e73\u53f0'), ('description', u'\u997f\u4e86\u4e48\u5916\u5356\u5e73\u53f0'), ('product', <ProductModel: ProductModel object>), ('dev_department', <UserDepartmentModel: UserDepartmentModel object>)]), 'update_time': u'2016-10-31T16:04:05.852214Z', 'http_port': None, 'dev_department': OrderedDict([(u'id', 1L), ('create_time', datetime.datetime(2016, 10, 27, 20, 7, 19, 850250, tzinfo=<UTC>)), ('update_time', datetime.datetime(2016, 10, 27, 20, 7, 20, 856149, tzinfo=<UTC>)), ('name', u'WAIMAI'), ('visible_name', u'\u7528\u6237\u4ea4\u6613\u7814\u53d1\u90e8'), ('description', None), ('__url__', u'/cmc/departments/1/')]), 'name': u'waimai.ios', 'thrift_port': None, 'life_cycle': None, 'udp_port': None, 'visible_name': u'', '__url__': u'/arch/appids/1/', 'create_time': u'2016-10-27T20:07:19.855388Z', 'app_arch': None, 'owner': None, 'product': OrderedDict([(u'id', 1L), ('create_time', datetime.datetime(2016, 10, 31, 6, 21, 28, 687114, tzinfo=<UTC>)), ('update_time', datetime.datetime(2016, 10, 31, 6, 21, 28, 687302, tzinfo=<UTC>)), ('name', u'eleme'), ('visible_name', u'\u997f\u4e86\u4e48\u5916\u5356\u5e73\u53f0'), ('description', u'\u997f\u4e86\u4e48\u7528\u6237\u4ea4\u6613\u5e73\u53f0')]), u'id': 1}
+ERROR    2016-11-01 00:44:47,118 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 283, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 58, in retrieve
+    raise ValueError(serializer.data)
+ValueError: {'monitor_port': None, 'project': OrderedDict([(u'id', 1L), ('create_time', datetime.datetime(2016, 10, 31, 15, 59, 29, 999083, tzinfo=<UTC>)), ('update_time', datetime.datetime(2016, 10, 31, 15, 59, 29, 999137, tzinfo=<UTC>)), ('name', u'waimai'), ('visible_name', u'\u5916\u5356\u5e73\u53f0'), ('description', u'\u997f\u4e86\u4e48\u5916\u5356\u5e73\u53f0'), ('product', <ProductModel: ProductModel object>), ('dev_department', <UserDepartmentModel: UserDepartmentModel object>)]), 'update_time': u'2016-10-31T16:04:05.852214Z', 'http_port': None, 'dev_department': OrderedDict([(u'id', 1L), ('create_time', datetime.datetime(2016, 10, 27, 20, 7, 19, 850250, tzinfo=<UTC>)), ('update_time', datetime.datetime(2016, 10, 27, 20, 7, 20, 856149, tzinfo=<UTC>)), ('name', u'WAIMAI'), ('visible_name', u'\u7528\u6237\u4ea4\u6613\u7814\u53d1\u90e8'), ('description', None), ('__url__', u'/cmc/departments/1/')]), 'name': u'waimai.ios', 'thrift_port': None, 'life_cycle': None, 'udp_port': None, 'visible_name': u'', '__url__': u'/arch/appids/1/', 'create_time': u'2016-10-27T20:07:19.855388Z', 'app_arch': None, 'owner': None, 'product': OrderedDict([(u'id', 1L), ('create_time', datetime.datetime(2016, 10, 31, 6, 21, 28, 687114, tzinfo=<UTC>)), ('update_time', datetime.datetime(2016, 10, 31, 6, 21, 28, 687302, tzinfo=<UTC>)), ('name', u'eleme'), ('visible_name', u'\u997f\u4e86\u4e48\u5916\u5356\u5e73\u53f0'), ('description', u'\u997f\u4e86\u4e48\u7528\u6237\u4ea4\u6613\u5e73\u53f0')]), u'id': 1}
+ERROR    2016-11-01 00:56:05,153 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 283, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 58, in retrieve
+    raise ValueError(serializer.data)
+ValueError: {'monitor_port': None, 'project': OrderedDict([(u'id', 1), ('create_time', u'2016-10-31T15:59:29.999083Z'), ('update_time', u'2016-10-31T15:59:29.999137Z'), ('name', u'waimai'), ('visible_name', u'\u5916\u5356\u5e73\u53f0'), ('description', u'\u997f\u4e86\u4e48\u5916\u5356\u5e73\u53f0'), ('product', 1L), ('dev_department', 1L), ('swimlane', [])]), 'update_time': u'2016-10-31T16:04:05.852214Z', 'http_port': None, 'dev_department': OrderedDict([(u'id', 1), ('create_time', u'2016-10-27T20:07:19.850250Z'), ('update_time', u'2016-10-27T20:07:20.856149Z'), ('name', u'WAIMAI'), ('visible_name', u'\u7528\u6237\u4ea4\u6613\u7814\u53d1\u90e8'), ('description', None)]), 'name': u'waimai.ios', 'thrift_port': None, 'life_cycle': None, 'udp_port': None, 'visible_name': u'', '__url__': u'/arch/appids/1/', 'create_time': u'2016-10-27T20:07:19.855388Z', 'app_arch': None, 'owner': None, 'product': OrderedDict([(u'id', 1), ('create_time', u'2016-10-31T06:21:28.687114Z'), ('update_time', u'2016-10-31T06:21:28.687302Z'), ('name', u'eleme'), ('visible_name', u'\u997f\u4e86\u4e48\u5916\u5356\u5e73\u53f0'), ('description', u'\u997f\u4e86\u4e48\u7528\u6237\u4ea4\u6613\u5e73\u53f0')]), u'id': 1}
+ERROR    2016-11-01 00:58:56,632 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 697, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 631, in get_context
+    raw_data_put_form = self.get_raw_data_form(data, view, 'PUT', request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 553, in get_raw_data_form
+    content = renderer.render(serializer.data, accepted, context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <ProductModel: ProductModel object> is not JSON serializable
+ERROR    2016-11-01 01:07:53,319 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 283, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 508, in data
+    ret = super(Serializer, self).data
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 240, in data
+    self._data = self.to_representation(self.instance)
+  File "/data/fmc/pycharm_workspase/omni/omni/libs/django_rest_framework/serializers.py", line 15, in to_representation
+    ret = super(CommonExtModelSerializer, self).to_representation(instance)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 477, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/data/fmc/pycharm_workspase/omni/omni/libs/django_rest_framework/relations.py", line 22, in to_representation
+    value_dict['__url__'] = value.get_absolute_url()
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/models/product.py", line 32, in get_absolute_url
+    return reverse('template-arch:product-detail', args=[str(self.id)])
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'product-detail' with arguments '('1',)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR    2016-11-01 01:12:44,992 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 283, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 508, in data
+    ret = super(Serializer, self).data
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 240, in data
+    self._data = self.to_representation(self.instance)
+  File "/data/fmc/pycharm_workspase/omni/omni/libs/django_rest_framework/serializers.py", line 15, in to_representation
+    ret = super(CommonExtModelSerializer, self).to_representation(instance)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 477, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/data/fmc/pycharm_workspase/omni/omni/libs/django_rest_framework/relations.py", line 23, in to_representation
+    raise ValueError(value_dict)
+ValueError: OrderedDict([(u'id', 1L), ('create_time', datetime.datetime(2016, 10, 31, 6, 21, 28, 687114, tzinfo=<UTC>)), ('update_time', datetime.datetime(2016, 10, 31, 6, 21, 28, 687302, tzinfo=<UTC>)), ('name', u'eleme'), ('visible_name', u'\u997f\u4e86\u4e48\u5916\u5356\u5e73\u53f0'), ('description', u'\u997f\u4e86\u4e48\u7528\u6237\u4ea4\u6613\u5e73\u53f0'), ('__url__', u'/arch/products/1/')])
+ERROR    2016-11-01 01:13:01,347 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 697, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 631, in get_context
+    raw_data_put_form = self.get_raw_data_form(data, view, 'PUT', request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 553, in get_raw_data_form
+    content = renderer.render(serializer.data, accepted, context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <ProductModel: ProductModel object> is not JSON serializable
+ERROR    2016-11-01 01:14:12,513 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 283, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 508, in data
+    ret = super(Serializer, self).data
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 240, in data
+    self._data = self.to_representation(self.instance)
+  File "/data/fmc/pycharm_workspase/omni/omni/libs/django_rest_framework/serializers.py", line 15, in to_representation
+    ret = super(CommonExtModelSerializer, self).to_representation(instance)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 460, in to_representation
+    fields = self._readable_fields
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 354, in _readable_fields
+    field for field in self.fields.values()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 340, in fields
+    for key, value in self.get_fields().items():
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 943, in get_fields
+    assert depth <= 10, "'depth' may not be greater than 10."
+AssertionError: 'depth' may not be greater than 10.
+WARNING  2016-11-01 15:08:27,162 django.request      [line 152 ] Not Found: /favicon.ico
+WARNING  2016-11-01 19:51:38,599 django.request      [line 152 ] Not Found: /favicon.ico
+ERROR    2016-11-02 04:54:48,135 django.request      [line 124 ] Internal Server Error: /cmc/departments/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 66, in resolve_template
+    return select_template(template, using=self.using)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loader.py", line 53, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+TemplateDoesNotExist: cmc/departments/1.html
+WARNING  2016-11-02 04:57:18,671 django.request      [line 152 ] Not Found: /arch/cluster/template/
+WARNING  2016-11-02 04:57:24,070 django.request      [line 152 ] Not Found: /arch/clusters/template/
+WARNING  2016-11-02 04:57:34,274 django.request      [line 152 ] Not Found: /restapi/arch/clusters/templates/1/
+WARNING  2016-11-02 04:57:46,256 django.request      [line 152 ] Not Found: /restapi/arch/clusters/templates/1/
+WARNING  2016-11-02 10:32:29,604 django.request      [line 152 ] Not Found: /arch/project/create/
+ERROR    2016-11-02 12:29:40,492 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 40, in update
+    project_data = validated_data.pop('project')
+KeyError: 'project'
+ERROR    2016-11-02 12:49:47,080 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 40, in update
+    raise TypeError(instance)
+TypeError: AppIdModel object
+ERROR    2016-11-02 12:50:26,411 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 40, in update
+    raise TypeError(instance.fields)
+AttributeError: 'AppIdModel' object has no attribute 'fields'
+ERROR    2016-11-02 12:52:19,925 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 40, in update
+    raise TypeError(instance.project)
+TypeError: arch.ProjectModel.None
+ERROR    2016-11-02 12:56:56,714 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 40, in update
+    raise TypeError(instance)
+TypeError: AppIdModel object
+ERROR    2016-11-02 12:57:12,552 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 40, in update
+    raise TypeError(instance.project)
+TypeError: arch.ProjectModel.None
+ERROR    2016-11-02 12:57:25,953 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 40, in update
+    raise TypeError(instance.project.set)
+TypeError: <bound method ManyRelatedManager.set of <django.db.models.fields.related_descriptors.ManyRelatedManager object at 0x104131950>>
+ERROR    2016-11-02 12:58:21,800 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 40, in update
+    raise TypeError(validated_data['project'])
+KeyError: 'project'
+ERROR    2016-11-02 12:58:46,581 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 39, in update
+    raise TypeError(validated_data['project'])
+KeyError: 'project'
+ERROR    2016-11-02 12:59:02,649 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 39, in update
+    raise TypeError(validated_data['project'])
+KeyError: 'project'
+ERROR    2016-11-02 13:04:37,510 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 39, in update
+    raise ValueError(validated_data.keys())
+ValueError: [u'monitor_port', u'http_port', u'thrift_port', u'udp_port', u'visible_name', u'app_arch']
+ERROR    2016-11-02 13:07:35,958 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 39, in update
+    raise ValueError(validated_data)
+ValueError: {u'monitor_port': None, u'http_port': None, u'thrift_port': None, u'udp_port': None, u'visible_name': u'', u'app_arch': None}
+ERROR    2016-11-02 13:09:30,378 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 39, in update
+    raise ValueError(instance.relations)
+AttributeError: 'AppIdModel' object has no attribute 'relations'
+ERROR    2016-11-02 13:21:47,988 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 39, in update
+    raise ValueError(instance.relations)
+AttributeError: 'AppIdModel' object has no attribute 'relations'
+ERROR    2016-11-02 14:40:15,357 django.request      [line 124 ] Internal Server Error: /restapi/arch/appids/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/product.py", line 39, in update
+    raise ValueError(self.initial_data)
+ValueError: <QueryDict: {u'monitor_port': [u''], u'project': [u'1', u'2'], u'product': [u'1'], u'http_port': [u''], u'dev_department': [u'1'], u'thrift_port': [u''], u'udp_port': [u''], u'visible_name': [u''], u'app_arch': [u''], u'owner': [u'']}>

@@ -1,0 +1,11 @@
+{% if appid_list %}
+<tbody>
+{% for appid in appid_list %}
+<tr>
+  <td>{{ appid }}</td>
+</tr>
+{% endfor %}
+</tbody>
+{% else %}
+<tbody><tr><td>无数据</td></tr></tbody>
+{% endif %}

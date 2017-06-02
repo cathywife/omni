@@ -1,0 +1,173 @@
+{% extends 'base/base_detail.html' %}
+{% load static %}
+
+{% block page_body_content_article %}
+  <div class="box box-primary">
+    <div class="box-header with-border">
+      <h3 class="box-title">{{ body_header_navigation.page }}</h3>
+    </div>
+    <ul class="nav nav-tabs" role="tablist" id="cluster_template_version_detail">
+      <li role="presentation" class="active"><a href="#cluster_template_version_profile" role="tab" data-toggle="tab">基本信息</a></li>
+      <li role="presentation"><a href="#cluster_template_version_task" role="tab" data-toggle="tab">任务配置</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="cluster_template_version_profile">
+          <div class="box-header with-border">
+            <div class="col-md-6">
+              <button class="btn btn-info btn-flat pull-right" id="cluster_template_version_edit_button" data-toggle="modal" data-target="#cluster_template_version_profile_edit">
+                编  辑</button></div>
+
+          </div>
+          <div class="box-body">
+            <ul class="list-group col-md-6">
+              <li class="list-group-item no-border">
+                <span class="col-lg-2 col-md-3 col-sm-3 text-right">模板名称: </span>
+                <span><a class="col-md-offset-1" target="_blank" id="cluster_template_version_id_template"></a></span>
+              </li>
+              <li class="list-group-item">
+                <span class="col-lg-2 col-md-3 col-sm-3 text-right">版本号: </span>
+                <span class="col-md-offset-1"><span class="badge" id="cluster_template_version_id_version"></span></span>
+              </li>
+              <li class="list-group-item">
+                <span class="col-lg-2 col-md-3 col-sm-3 text-right">版本状态: </span> <strong class="col-md-offset-1" id="cluster_template_version_id_status">543</strong>
+              </li>
+              <li class="list-group-item">
+                <span class="col-lg-2 col-md-3 col-sm-3 text-right">变更描述: </span>
+                <blockquote>
+                  <pre id="cluster_template_version_id_changes"></pre>
+                </blockquote>
+              </li>
+              <li class="list-group-item">
+                <span class="col-lg-2 col-md-3 col-sm-3 text-right">AppId: </span>
+                <div class="col-md-offset-1">
+                  <div class="table-responsive">
+                    <table id="cluster_template_version_id_app_id" class="table table-hover">
+                      <tbody>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <span class="col-lg-2 col-md-3 col-sm-3 text-right">默认主机型号: </span> <a class="col-md-offset-1" id="cluster_template_version_id_host_model"></a>
+              </li>
+              <li class="list-group-item">
+                <span class="col-lg-2 col-md-3 col-sm-3 text-right">创建时间: </span> <a class="col-md-offset-1" id="cluster_template_version_id_create_time"></a>
+              </li>
+              <li class="list-group-item">
+                <span class="col-lg-2 col-md-3 col-sm-3 text-right">创建人: </span> <a class="col-md-offset-1">543</a>
+              </li>
+              <li class="list-group-item">
+                <span class="col-lg-2 col-md-3 col-sm-3 text-right">更新时间: </span> <a class="col-md-offset-1" id="cluster_template_version_id_update_time"></a>
+              </li>
+              <li class="list-group-item">
+                <span class="col-lg-2 col-md-3 col-sm-3 text-right">更新人: </span> <a class="col-md-offset-1">543</a>
+              </li>
+            </ul>
+          </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="cluster_template_version_task">
+
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="cluster_template_version_profile_edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+  data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="cluster_template_version_profile_edit_modalTitle">编辑基本信息</h4>
+      </div>
+      <div class="modal-body">
+        <form id="{{ cluster_template_version_form.get_form_name }}" class="form-horizontal">
+            {{ cluster_template_version_form.as_bootstrap }}
+          <!-- /.box-body -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取  消</button>
+        <button type="button" class="btn btn-primary" id="cluster_template_version_profile_submit">保  存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block page_embed_body_js %}
+{% get_static_prefix as STATIC_PREFIX %}
+<script src="{{ STATIC_PREFIX }}js/common/update.js"></script>
+<script>
+var cluster_template_version_detail_url = "{% url 'restapi-arch:cluster-template-version-detail' cluster_template_id version %}";
+// 初始化 基本信息 展示
+$(function () {
+  $.get(cluster_template_version_detail_url, function (data) {
+    init_object_detail(data);
+    $('#cluster_template_version_id_template').text(data.template.name).attr('href', data.template.__url__);
+    $('#cluster_template_version_id_status').text(data.status.name);
+    $('#cluster_template_version_id_version').text(data.version);
+    $('#cluster_template_version_id_changes').text(data.changes);
+    var $cluster_template_version_appid_tbody = $('#cluster_template_version_id_app_id tbody');
+    $cluster_template_version_appid_tbody.children('tr').remove();
+    $.each(data.app_id, function (i, appid_info) {
+        if (!appid_info){
+            return true
+        }
+        var td_list = [];
+        td_list.push(table_gen_td(appid_info, 'name'));
+        td_list.push(table_gen_td(appid_info, 'product', 'name', true));
+        $cluster_template_version_appid_tbody.append('<tr>' + td_list.join('') + ' </tr>')
+    });
+    $('#cluster_template_version_id_host_model').text(data.host_model.name);
+    $('#cluster_template_version_id_create_time').text(data.create_time);
+    $('#cluster_template_version_id_update_time').text(data.update_time);
+  }).fail(function (response_obj, status) {
+        pnotify_alert_for_ajax(response_obj, cluster_template_version_detail_url)
+    });
+});
+
+//cluster_template_version_profile_edit 模态框初始化
+
+$("#{{ cluster_template_version_form.host_model.id_for_label }}").selectize(selectize_init_for_select(
+    {},
+    {url: "{% url 'restapi-arch:host-model-list' %}?ordering=name"}
+    )
+);
+
+$("#{{ cluster_template_version_form.app_id.id_for_label }}").selectize(selectize_init_for_select(
+    {maxItems: 1000},
+    {url: "{% url 'restapi-arch:appid-list' %}"}
+    )
+);
+
+
+// 提交 基本信息 变更
+$("#cluster_template_version_profile_submit").click(function () {
+    var form_obj = $("#ClusterTemplateVersionForm");
+    var form_data = form_obj.serializeArray();
+    var post_data = $.each(form_data, function (index, field_obj) {
+        var data = {};
+        data[field_obj.name] = field_obj.value;
+        return data
+    });
+
+    $.ajax({
+        url: cluster_template_version_detail_url,
+        type: 'patch',
+        data: post_data,
+        cache: true,
+        error: function (response_obj, status, errorThrown) {
+            alert_failed_for_form(response_obj, status, cluster_template_version_detail_url, form_obj)
+        },
+        success: function (data, textStatus, jqXHR) {
+            alert_success_for_form('成功!!', '添加项目成功!!', cluster_template_version_detail_url, data.name, form_obj)
+        }
+    })
+})
+
+</script>
+{% endblock %}

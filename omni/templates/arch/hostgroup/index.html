@@ -1,0 +1,432 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block custom_css %}
+    {% get_static_prefix as STATIC_PREFIX %}
+    <link href="{{ STATIC_PREFIX }}css/common.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block page_body_content_header %}
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      集群管理
+      <small>主机</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="#">集群管理</a></li>
+      <li class="active">主机</li>
+    </ol>
+  </section>
+{% endblock %}
+
+{% block page_body_content_article %}
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+        <div class="box box-primary">
+          <div class="box-header">
+            <h3 class="box-title">主机及主机组列表</h3>
+          </div><!-- /.box-header -->
+        </div>
+        <!-- 泳道主机组 -->
+        <div class="col-md-3 lesser-padding-col">
+          <div class="box">
+            <div class="box-header">
+                <div class="input-group">
+                  <input id="hostgroup_search_text" type="text" class="form-control" placeholder="Search for hostgroup">
+                    <input id="hostgroup_search_last" type="text" class="hidden">
+                  <span class="input-group-btn">
+                    <button id="hostgroup_search" class="btn btn-default" type="button">搜 索</button>
+                  </span>
+                </div><!-- /input-group -->
+            </div>
+            <div class="box-body">
+              <table id="hostgroup_list" class="table table-responsive table-hover">
+                <tbody>
+                {% if hostgroup_list %}
+                {% for hostgroup in hostgroup_list %}
+                <tr>
+                  <td>{{ hostgroup.name }}</td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr>
+                  <td>无数据</td>
+                </tr>
+                {% endif %}
+                </tbody>
+              </table>
+                <nav>
+                    <input id="hostgroup_paging_num" type="number" class="hidden" value="{{ page_num }}">
+                    <input id="hostgroup_paging_size" type="number" class="hidden" value="{{ page_size }}">
+                  <ul class="pager">
+                    <li class="disabled"><a href="#" id="hostgroup_paging_previous">Previous</a></li>
+                    <li><a href="#" id="hostgroup_paging_next">Next</a></li>
+                  </ul>
+                </nav>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <!-- AppId -->
+          <div class="row">
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title">App ID</h3>
+              </div>
+              <div class="box-body">
+                <div role="row" id="appid_operation_row">
+                  <div class="col-md-3">
+                    <div id="hostgroup_add_appid_input_group" class="input-group">
+                      <input name="hostgroup_add_appid_input" type="text" class="form-control" placeholder="输入AppId">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">增 加</button>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div id="hostgroup_del_appid_input_group" class="input-group">
+                      <button class="btn btn-default" type="button">删 除</button>
+                    </div>
+                  </div>
+                </div>
+              <table id="appid_list" class="table table-responsive table-hover">
+                <tbody>
+                <tr>
+                  <td>无数据</td>
+                </tr>
+                </tbody>
+              </table>
+                <!--<nav>
+                    <input id="hostgroup_paging_num" type="number" class="hidden" value="{{ page_num }}">
+                    <input id="hostgroup_paging_size" type="number" class="hidden" value="{{ page_size }}">
+                  <ul class="pager">
+                    <li class="disabled"><a href="#" id="hostgroup_paging_previous">Previous</a></li>
+                    <li><a href="#" id="hostgroup_paging_next">Next</a></li>
+                  </ul>
+                </nav>-->
+            </div>
+            </div>
+          </div>
+          <!-- 主机列表 -->
+          <div class="row">
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title">主机列表</h3>
+              </div>
+              <div class="box-body">
+                <div role="row" id="host_operation_row">
+                  <div class="col-md-3">
+                    <div id="hostgroup_add_host_input_group" class="input-group">
+                      <input name="hostgroup_add_host_input" type="text" class="form-control" placeholder="输入主机名">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">增 加</button>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div id="hostgroup_del_host_input_group" class="input-group">
+                      <button class="btn btn-default" type="button">删 除</button>
+                    </div>
+                  </div>
+                </div>
+                <table id="host_list" class="table table-responsive table-hover">
+                  <thead>
+                    <tr>
+                      <td>主机名</td>
+                      <td>IP地址</td>
+                      <td>使用状态</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>无数据</td>
+                    <td>无数据</td>
+                    <td>无数据</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section><!-- /.content -->
+{% endblock %}
+
+{% block page_embed_body_js %}
+<!-- page script -->
+<script>
+
+    $("#hostgroup_list").on('click', "tbody tr", function () {
+        var hostgroup_name = $(this).find("td:eq(0)").text();
+        $.get('/arch/hostgroup/appid?name=' + hostgroup_name, function (data, status) {
+            $("#appid_list").html(data)
+        });
+        $.get('/arch/hostgroup/host?name=' + hostgroup_name, function (data, status) {
+            $("#host_list tbody").html(data);
+        });
+        //$(this).addClass('active').siblings().removeClass('active');
+    });
+
+    $("table").on('click', 'tbody tr', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    $("#hostgroup_search").click(function () {
+        var hostgroup_search_text = $("#hostgroup_search_text").val();
+        var page_num = 1;
+        var page_size = 10;
+
+        $("#hostgroup_paging_num").text(page_num);
+        $("#hostgroup_paging_size").text(page_size);
+
+        $.get('/arch/hostgroup/search?page=' + page_num + '&size=' + page_size + '&name=' + hostgroup_search_text,
+                function (data, status) {
+            if(status == 'success'){
+                $("#hostgroup_list").html(data)
+            } else {
+                $("#hostgroup_list").html('<tbody><tr>无数据</tr></tbody>')
+            }
+        });
+    }).click();
+
+    $("#hostgroup_paging_previous").click(function () {
+        var hostgroup_paging_num_input = $("#hostgroup_paging_num");
+        var page_num = Number(hostgroup_paging_num_input.val());
+        var new_page_num = page_num - 1;
+        var page_size = $("#hostgroup_paging_size").val();
+        if(new_page_num <= 0){
+            $("#hostgroup_paging_previous").parent().addClass('disabled')
+        } else {
+            $.get('/arch/hostgroup/search?page=' + new_page_num + '&size=' + page_size + '&name=' + $("#hostgroup_search_text").val(),
+                    function (data, status) {
+                if(status == 'success'){
+                    $("#hostgroup_list").html(data);
+                    hostgroup_paging_num_input.val(new_page_num);
+                    $("#hostgroup_paging_next").parent().removeClass('disabled')
+                } else {
+                    $("#hostgroup_list").html('<tbody><tr>无数据</tr></tbody>')
+                }
+            });
+        }
+    });
+
+    $("#hostgroup_paging_next").click(function () {
+        var hostgroup_paging_num_input = $("#hostgroup_paging_num");
+        var page_num = Number(hostgroup_paging_num_input.val());
+        var new_page_num = page_num + 1;
+        var page_size = $("#hostgroup_paging_size").val();
+        if(new_page_num > 1){
+            $("#hostgroup_paging_previous").parent().removeClass('disabled');
+            $.get('/arch/hostgroup/search?page=' + new_page_num + '&size=' + page_size + '&name=' + $("#hostgroup_search_text").val(),
+                    function (data, status) {
+                if(status == 'success'){
+                    $("#hostgroup_list").html(data);
+                    if(data.trim() == '<tbody><tr><td>无数据</td></tr></tbody>'){
+                        $("#hostgroup_paging_next").parent().addClass('disabled')
+                    }
+
+                    hostgroup_paging_num_input.val(new_page_num);
+                } else {
+                    $("#hostgroup_list").html('<tbody><tr><td>无数据</td></tr></tbody>');
+                }
+            });
+        }
+
+    });
+
+    function callout_for_appid(msg, level) {
+        $("#appid_operation_row").before(
+            '<div class="callout ' + level + '" role="alert">' + msg + '</div>')
+    }
+
+    function callout_for_host(msg, level) {
+        $("#host_operation_row").before(
+            '<div class="callout ' + level + '" role="alert">' + msg + '</div>')
+    }
+
+    $("#hostgroup_add_appid_input_group button").click(function () {
+        var hostgroup_add_appid = $("#hostgroup_add_appid_input_group input").val();
+        var hostgroup_name = $("#hostgroup_list tbody .active td").text();
+        var appid_operation_row_obj = $("#appid_operation_row");
+        appid_operation_row_obj.parent().find('.callout').remove();
+
+        if(hostgroup_name == '' || hostgroup_name == null){
+            callout_for_appid('需要首先选择主机组再进行操作!!', 'callout-warning');
+            return
+        }
+
+        if(hostgroup_add_appid == ''){
+            callout_for_appid('需要填写AppId!!', 'callout-warning');
+            return
+        }
+
+        $.post('/arch/hostgroup/appid/add', {app_id: hostgroup_add_appid, hostgroup_name: hostgroup_name},
+            function (data, status, response_obj) {
+                if(response_obj.status == 304){
+                    callout_for_appid(response_obj.statusText, 'callout-info')
+                } else {
+                    callout_for_appid(data.msg, 'callout-success')
+                }
+
+            }, 'json').fail(function (response_obj, status) {
+                var out_str = [];
+                if(response_obj == 404){
+                    callout_for_appid('服务端异常: /arch/hostgroup/appid/add 404 (Not Found)', 'callout-danger')
+                } else if($.inArray(response_obj.status, [500, 502, 503, 504]) >= 0) {
+                    callout_for_appid(response_obj.responseJSON.msg, 'callout-danger')
+
+                } else if($.inArray(response_obj.status, [400, 401, 403]) >= 0) {
+                    $.each(response_obj.responseJSON, function (key, val) {
+                        out_str.push(key + ':  ' + val.join('\n\t\t'))
+                    });
+                    callout_for_appid(out_str.join('\n'), 'callout-warning')
+
+                } else {
+                    callout_for_appid('API调用异常,为主机组"' + hostgroup_name + '",增加AppID "' + hostgroup_add_appid +
+                      '"失败, 请重试!!', 'callout-danger')
+                }
+
+            })
+    });
+
+    $("#hostgroup_del_appid_input_group button").click(function () {
+        var hostgroup_del_appid = $("#appid_list tbody .active td").text();
+        var hostgroup_name = $("#hostgroup_list tbody .active td").text();
+        var appid_operation_row_obj = $("#appid_operation_row");
+        appid_operation_row_obj.parent().find('.callout').remove();
+
+        if(hostgroup_name == '' || hostgroup_name == null){
+            callout_for_appid('需要首先选择主机组再进行操作!!', 'callout-warning');
+            return
+        }
+
+        if(hostgroup_del_appid == ''){
+            callout_for_appid('请先选择AppId!!', 'callout-warning');
+            return
+        }
+
+        $.post('/arch/hostgroup/appid/del', {app_id: hostgroup_del_appid, hostgroup_name: hostgroup_name},
+            function (data, status, response_obj) {
+                if(response_obj.status == 304){
+                    callout_for_appid(response_obj.statusText, 'callout-info')
+                } else {
+                    callout_for_appid(data.msg, 'callout-success')
+                }
+
+            }, 'json').fail(function (response_obj, status) {
+                var out_str = [];
+                if(response_obj.status == 404){
+                    callout_for_appid('服务端异常: /arch/hostgroup/appid/del 404 (Not Found)', 'callout-danger')
+                } else if($.inArray(response_obj.status, [500, 502, 503, 504]) >= 0) {
+                    callout_for_appid(response_obj.responseJSON.msg, 'callout-danger')
+
+                } else if($.inArray(response_obj.status, [400, 401, 403]) >= 0) {
+                    $.each(response_obj.responseJSON, function (key, val) {
+                        out_str.push(key + ':  ' + val.join('\n\t\t'))
+                    });
+                    callout_for_appid(out_str.join('\n'), 'callout-warning')
+
+                } else {
+                    callout_for_appid('API调用异常,为主机组"' + hostgroup_name + '",删除AppID "' + hostgroup_add_appid +
+                      '"失败, 请重试!!', 'callout-danger')
+                }
+
+            })
+    });
+
+    $("#hostgroup_add_host_input_group button").click(function () {
+        var hostgroup_add_host = $("#hostgroup_add_host_input_group input").val();
+        var hostgroup_name = $("#hostgroup_list tbody .active td").text();
+        var host_operation_row_obj = $("#host_operation_row");
+        host_operation_row_obj.parent().find('.callout').remove();
+
+        if(hostgroup_name == '' || hostgroup_name == null){
+            callout_for_host('需要首先选择主机组再进行操作!!', 'callout-warning');
+            return
+        }
+
+        if(hostgroup_add_host == ''){
+            callout_for_host('需要填写主机名!!', 'callout-warning');
+            return
+        }
+
+        $.post('/arch/hostgroup/host/add', {hosts: hostgroup_add_host, hostgroup_name: hostgroup_name},
+            function (data, status, response_obj) {
+                if(response_obj.status == 304){
+                    callout_for_host(response_obj.statusText, 'callout-info')
+                } else {
+                    callout_for_host(data.msg, 'callout-success')
+                }
+
+            }, 'json').fail(function (response_obj, status) {
+                var out_str = [];
+                if(response_obj == 404){
+                    callout_for_host('服务端异常: /arch/hostgroup/host/add 404 (Not Found)', 'callout-danger')
+                } else if($.inArray(response_obj.status, [500, 502, 503, 504]) >= 0) {
+                    callout_for_host(response_obj.responseJSON.msg, 'callout-danger')
+
+                } else if($.inArray(response_obj.status, [400, 401, 403]) >= 0) {
+                    $.each(response_obj.responseJSON, function (key, val) {
+                        out_str.push(key + ':  ' + val.join('\n\t\t'))
+                    });
+                    callout_for_host(out_str.join('\n'), 'callout-warning')
+
+                } else {
+                    callout_for_host('API调用异常,为主机组"' + hostgroup_name + '",增加服务器 "' + hostgroup_add_appid +
+                      '"失败, 请重试!!', 'callout-danger')
+                }
+
+            })
+    });
+
+    $("#hostgroup_del_host_input_group button").click(function () {
+        var hostgroup_del_host = $("#host_list tbody .active td").text();
+        var hostgroup_name = $("#hostgroup_list tbody .active td").text();
+        var host_operation_row_obj = $("#host_operation_row");
+        host_operation_row_obj.parent().find('.callout').remove();
+
+        if(hostgroup_name == '' || hostgroup_name == null){
+            callout_for_host('需要首先选择主机组再进行操作!!', 'callout-warning');
+            return
+        }
+
+        if(hostgroup_del_host == ''){
+            callout_for_host('请先选择主机!!', 'callout-warning');
+            return
+        }
+
+        $.post('/arch/hostgroup/host/del', {hosts: hostgroup_del_host, hostgroup_name: hostgroup_name},
+            function (data, status, response_obj) {
+                if(response_obj.status == 304){
+                    callout_for_host(response_obj.statusText, 'callout-info')
+                } else {
+                    callout_for_host(data.msg, 'callout-success')
+                }
+
+            }, 'json').fail(function (response_obj, status) {
+                var out_str = [];
+                if(response_obj.status == 404){
+                    callout_for_host('服务端异常: /arch/hostgroup/host/del 404 (Not Found)', 'callout-danger')
+                } else if($.inArray(response_obj.status, [500, 502, 503, 504]) >= 0) {
+                    callout_for_host(response_obj.responseJSON.msg, 'callout-danger')
+
+                } else if($.inArray(response_obj.status, [400, 401, 403]) >= 0) {
+                    $.each(response_obj.responseJSON, function (key, val) {
+                        out_str.push(key + ':  ' + val.join('\n\t\t'))
+                    });
+                    callout_for_host(out_str.join('\n'), 'callout-warning')
+
+                } else {
+                    callout_for_host('API调用异常,为主机组"' + hostgroup_name + '",删除服务器 "' + hostgroup_add_appid +
+                      '"失败, 请重试!!', 'callout-danger')
+                }
+
+            })
+    })
+
+</script>
+{% endblock %}

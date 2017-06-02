@@ -62,3 +62,8 @@ salt_menu['sub__'].append({'name': 'salt_state_list', 'value': 'State列表', 't
 
 
 aside_menu_data = [dashboard, asset_manager_menu, salt_menu]
+
+
+
+# project菜单
+project_menu_data = {}

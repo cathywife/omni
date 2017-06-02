@@ -4,7 +4,7 @@ import sys
 
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
-from django.core.context_processors import csrf
+from django.views.decorators.csrf import csrf_protect
 from django.contrib import auth
 
 from omni.libs.utils.auth import check_user, check_session
@@ -12,8 +12,9 @@ from omni.libs.utils.auth import check_user, check_session
 log = logging.Logger(__name__)
 
 
+@csrf_protect
 def get_login_response(request, template_name, content):
-    content.update(csrf(request))
+    content.update(request)
     return render_to_response(template_name, content)
 
 

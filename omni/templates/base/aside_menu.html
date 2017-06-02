@@ -27,6 +27,17 @@
     <!-- /.search form -->
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
+      <li class="header">项目</li>
+      <li>
+        <a href="{{ project_menu_data.url | default:'#' }}">
+          <i class="{{ project_menu_data.before_icon | default:'' }}"></i> <span>{{ project_menu_data.value }}</span>
+          {% if project_menu_data.badge %}
+            <small class="label pull-right {{ project_menu_data.badge_bg | default:'' }}">{{ project_menu_data.badge }}</small>
+          {% elif project_menu_data.after_icon %}
+            <i class="{{ project_menu_data.after_icon }}"></i>
+          {% endif %}
+        </a>
+      </li>
       <li class="header">MAIN NAVIGATION</li>
       {% for menu_data in aside_menu_data %}
         {% if menu_data.sub__ %}

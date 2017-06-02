@@ -7,19 +7,30 @@ Created on 2015年1月12日
 from __future__ import print_function, unicode_literals, division, absolute_import
 
 from django.utils.translation import ugettext_lazy as _
-from django.db.models.fields import CommaSeparatedIntegerField
+from django.db.models.fields import CharField
 from django.utils import six
-from django.db import models
+from django.core import validators
 from django.utils.encoding import smart_text
-from omni.libs.django.field.validators import validate_comma_separated_str_list
+from omni.libs.django.field.validators import validate_comma_separated_string_list
 
 
-class ListCommaSeparatedIntegerField(six.with_metaclass(models.SubfieldBase, CommaSeparatedIntegerField)):
+class ListCommaSeparatedIntegerField(CharField):
+
+    default_validators = [validators.validate_comma_separated_integer_list]
+    description = _("Comma-separated integers")
+
+    def formfield(self, **kwargs):
+        defaults = {
+            'error_messages': {
+                'invalid': _('Enter only digits separated by commas.'),
+            }
+        }
+        defaults.update(kwargs)
+        return super(ListCommaSeparatedIntegerField, self).formfield(**defaults)
+
     def to_python(self, value):
         if isinstance(value, six.string_types):
-            return tuple(value.split(','))
-        elif isinstance(value, str):
-            return tuple(value.split(','))
+            return tuple([int(v) for v in value.split(',') if v])
         else:
             return value
 
@@ -50,9 +61,16 @@ class ListCommaSeparatedIntegerField(six.with_metaclass(models.SubfieldBase, Com
 
         return value
 
+    def clean(self, value, model_instance):
+        if not isinstance(value, (tuple, list)):
+            self.validate(value, model_instance)
+            self.run_validators(value)
+        value = self.to_python(value)
+        return value
 
-class ListCommaSeparatedStringField(six.with_metaclass(models.SubfieldBase, CommaSeparatedIntegerField)):
-    default_validators = [validate_comma_separated_str_list]
+
+class ListCommaSeparatedStringField(ListCommaSeparatedIntegerField):
+    default_validators = [validate_comma_separated_string_list]
     description = _("Comma-separated Strings")
 
     def formfield(self, **kwargs):

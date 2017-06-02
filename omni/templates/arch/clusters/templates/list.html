@@ -1,0 +1,51 @@
+{% extends 'base/base_list.html' %}
+{% load static %}
+
+{% block page_body_content_article %}
+  <div class="box box-primary">
+    <div class="box-header with-border">
+      <h3 class="box-title">{{ body_header_navigation.page }}</h3>
+    </div>
+    <div class="box-body">
+      <div class="table-responsive">
+        {% block box_body_table %}
+        <table id="{{ table_name|default:'table_list' }}" class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <td>ID</td>
+              <td>Name</td>
+              <td>显示名称</td>
+              <td>所属产品</td>
+              <td>所属部门</td>
+              <td>Owner</td>
+              <td>运维小组</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      {% endblock %}
+      {% block box_body_table_pagination %}
+      <div class="box-footer">
+        <ul class="pagination pagination-sm no-margin pull-right">
+          <li><a href="#">&laquo;</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+      {% endblock %}
+      </div>
+    </div>
+    <!-- /.box-footer -->
+  </div>
+
+{% endblock %}
+
+{% block page_embed_body_js %}
+  {% get_static_prefix as STATIC_PREFIX %}
+  <script src="{{ STATIC_PREFIX }}js/arch/appid/list.js"></script>
+{% endblock %}

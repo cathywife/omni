@@ -1,0 +1,1157 @@
+ERROR    2016-11-04 18:53:31,444 django.request      [line 124 ] Internal Server Error: /arch/clusters/templates/2/versions/create/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 66, in resolve_template
+    return select_template(template, using=self.using)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loader.py", line 48, in select_template
+    return engine.get_template(template_name)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'url' takes at least one argument, the name of a url().
+ERROR    2016-11-04 18:53:34,642 django.request      [line 124 ] Internal Server Error: /arch/clusters/templates/2/versions/create/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 66, in resolve_template
+    return select_template(template, using=self.using)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loader.py", line 48, in select_template
+    return engine.get_template(template_name)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'url' takes at least one argument, the name of a url().
+ERROR    2016-11-04 18:53:36,825 django.request      [line 124 ] Internal Server Error: /arch/clusters/templates/2/versions/create/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 66, in resolve_template
+    return select_template(template, using=self.using)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loader.py", line 48, in select_template
+    return engine.get_template(template_name)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'url' takes at least one argument, the name of a url().
+ERROR    2016-11-04 18:54:46,794 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 72, in create
+    version_obj = self.get_object()
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 61, in get_object
+    except models.exceptions.MultipleObjectsReturned:
+AttributeError: 'module' object has no attribute 'exceptions'
+ERROR    2016-11-04 18:57:10,641 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 73, in create
+    version_obj = self.get_object()
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 61, in get_object
+    obj = super(ClusterTemplateVersionListCreateAPIView, self).get_object()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 93, in get_object
+    (self.__class__.__name__, lookup_url_kwarg)
+AssertionError: Expected view ClusterTemplateVersionListCreateAPIView to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+ERROR    2016-11-04 19:22:30,804 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 75, in create
+    version_obj = self.get_object()
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 63, in get_object
+    obj = super(ClusterTemplateVersionListCreateAPIView, self).get_object()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 93, in get_object
+    (self.__class__.__name__, lookup_url_kwarg)
+AssertionError: Expected view ClusterTemplateVersionListCreateAPIView to be called with a URL keyword argument named "inherit_version". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+WARNING  2016-11-04 19:25:56,769 django.request      [line 152 ] Not Found: /restapi/arch/clusters/templates/2/versions/
+WARNING  2016-11-04 19:26:24,471 django.request      [line 152 ] Not Found: /restapi/arch/clusters/templates/2/versions/
+WARNING  2016-11-04 23:23:13,303 django.request      [line 152 ] Not Found: /restapi/arch/clusters/templates/2/versions/
+ERROR    2016-11-06 15:00:21,954 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 96, in create
+    version_obj = ClusterTemplateVersionModel(template=self.kwargs['cluster_template_id'], version=1)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 537, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 211, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'2'": "ClusterTemplateVersionModel.template" must be a "ClusterTemplateModel" instance.
+ERROR    2016-11-06 15:00:32,798 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 96, in create
+    version_obj = ClusterTemplateVersionModel(template=self.kwargs['cluster_template_id'], version=1)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 537, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 211, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'2'": "ClusterTemplateVersionModel.template" must be a "ClusterTemplateModel" instance.
+ERROR    2016-11-06 15:07:51,117 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 98, in create
+    version_obj_config = version_obj.config.all() if version_obj.config else None
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 476, in __get__
+    return self.related_manager_cls(instance)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 783, in __init__
+    (instance, self.source_field_name))
+ValueError: "<ClusterTemplateVersionModel: ClusterTemplateVersionModel object>" needs to have a value for field "clustertemplateversionmodel" before this many-to-many relationship can be used.
+ERROR    2016-11-06 16:25:58,410 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 97, in create
+    raise ValueError(version_obj.config)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 476, in __get__
+    return self.related_manager_cls(instance)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 783, in __init__
+    (instance, self.source_field_name))
+ValueError: "<ClusterTemplateVersionModel: ClusterTemplateVersionModel object>" needs to have a value for field "clustertemplateversionmodel" before this many-to-many relationship can be used.
+ERROR    2016-11-06 16:28:06,246 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 97, in create
+    raise ValueError(version_obj)
+ValueError: ClusterTemplateVersionModel object
+ERROR    2016-11-06 16:49:56,868 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 104, in create
+    self.perform_create(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 158, in save
+    'You must call `.is_valid()` before calling `.save()`.'
+AssertionError: You must call `.is_valid()` before calling `.save()`.
+ERROR    2016-11-06 16:51:13,825 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 104, in create
+    serializer.is_valid(raise_exception=True)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 208, in is_valid
+    'Cannot call `.is_valid()` as no `data=` keyword argument was '
+AssertionError: Cannot call `.is_valid()` as no `data=` keyword argument was passed when instantiating the serializer instance.
+ERROR    2016-11-06 16:56:06,393 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 105, in create
+    self.perform_create(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 908, in update
+    instance.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 115, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 110, in execute
+    return self.cursor.execute(query, args)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/MySQLdb/cursors.py", line 226, in execute
+    self.errorhandler(self, exc, value)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorvalue
+IntegrityError: (1048, "Column 'status_id' cannot be null")
+ERROR    2016-11-06 17:02:17,581 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 105, in create
+    self.perform_create(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 908, in update
+    instance.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 115, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 110, in execute
+    return self.cursor.execute(query, args)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/MySQLdb/cursors.py", line 226, in execute
+    self.errorhandler(self, exc, value)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorvalue
+IntegrityError: (1048, "Column 'status_id' cannot be null")
+ERROR    2016-11-06 17:06:15,860 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 106, in create
+    self.perform_create(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 908, in update
+    instance.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 115, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 110, in execute
+    return self.cursor.execute(query, args)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/MySQLdb/cursors.py", line 226, in execute
+    self.errorhandler(self, exc, value)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorvalue
+IntegrityError: (1048, "Column 'host_model_id' cannot be null")
+ERROR    2016-11-06 18:24:35,770 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 101, in create
+    version_obj.status = 1
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 211, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "1": "ClusterTemplateVersionModel.status" must be a "ClusterTemplateVersionStatusModel" instance.
+ERROR    2016-11-06 18:26:00,956 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 107, in create
+    self.perform_create(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 908, in update
+    instance.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 110, in execute
+    return self.cursor.execute(query, args)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/MySQLdb/cursors.py", line 226, in execute
+    self.errorhandler(self, exc, value)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorvalue
+IntegrityError: (1062, "Duplicate entry '2-0' for key 'arch_cluster_template_version_template_id_193d9ccd_uniq'")
+ERROR    2016-11-06 18:43:48,408 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 107, in create
+    self.perform_create(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 908, in update
+    instance.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 110, in execute
+    return self.cursor.execute(query, args)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/MySQLdb/cursors.py", line 226, in execute
+    self.errorhandler(self, exc, value)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorvalue
+IntegrityError: (1062, "Duplicate entry '2-0' for key 'arch_cluster_template_version_template_id_193d9ccd_uniq'")
+ERROR    2016-11-06 18:45:48,607 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 96, in create
+    raise ValueError(version_obj.version)
+ValueError: 1
+ERROR    2016-11-06 18:46:44,027 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 243, in post
+    return self.create(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 108, in create
+    raise ValueError(version_obj.version)
+ValueError: 0
+WARNING  2016-11-07 12:27:25,488 django.request      [line 152 ] Not Found: /arch/clusters/templates/2/versions
+ERROR    2016-11-07 12:27:34,027 django.request      [line 124 ] Internal Server Error: /arch/clusters/templates/2/versions/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 66, in resolve_template
+    return select_template(template, using=self.using)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loader.py", line 53, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+TemplateDoesNotExist: arch/clusters/templates/2/versions/1.html
+ERROR    2016-11-07 12:29:24,471 django.request      [line 124 ] Internal Server Error: /arch/clusters/templates/2/versions/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'cluster-template-detail' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: [u'/*restapi/+arch/+clusters/+templates/+(?P<pk>\\d+)/+$']
+ERROR    2016-11-07 13:37:56,868 django.request      [line 124 ] Internal Server Error: /arch/clusters/templates/2/versions/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 155, in get
+    context = self.get_context_data(**kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 193, in get_context_data
+    context = {'cluster_template_form': ClusterTemplateForm, 'version': self.request.kwargs.get('version')}
+AttributeError: 'WSGIRequest' object has no attribute 'kwargs'
+ERROR    2016-11-07 13:38:13,700 django.request      [line 124 ] Internal Server Error: /arch/clusters/templates/2/versions/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 155, in get
+    context = self.get_context_data(**kwargs)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 193, in get_context_data
+    context = {'cluster_template_form': ClusterTemplateForm, 'version': self.request.kwarg.get('version')}
+AttributeError: 'WSGIRequest' object has no attribute 'kwarg'
+WARNING  2016-11-14 19:29:31,700 django.request      [line 152 ] Not Found: /favicon.ico
+WARNING  2016-11-16 17:58:58,353 django.request      [line 152 ] Not Found: /arch/product/create/
+WARNING  2016-11-16 17:58:58,924 django.request      [line 152 ] Not Found: /favicon.ico
+WARNING  2016-11-16 17:59:05,110 django.request      [line 152 ] Not Found: /arch/productes/create/
+WARNING  2016-11-16 18:00:04,756 django.request      [line 152 ] Not Found: /arch/appids/list
+WARNING  2016-11-17 15:23:41,121 django.request      [line 152 ] Not Found: /arch/clusters/
+WARNING  2016-11-17 15:23:50,258 django.request      [line 152 ] Not Found: /arch/clusters/list
+WARNING  2016-11-20 12:28:21,118 django.request      [line 152 ] Not Found: /restapi/arch/clusters/templates/1/versions/1/
+WARNING  2016-11-20 12:43:36,477 django.request      [line 158 ] Forbidden (CSRF token missing or incorrect.): /arch/clusters/templates/
+WARNING  2016-11-20 12:43:46,696 django.request      [line 158 ] Forbidden (CSRF token missing or incorrect.): /arch/clusters/templates/
+WARNING  2016-11-20 12:43:56,575 django.request      [line 158 ] Forbidden (CSRF token missing or incorrect.): /arch/clusters/templates/
+WARNING  2016-11-20 13:23:53,389 django.request      [line 152 ] Not Found: /restapi/arch/clusters/templates/2/versions/2/
+WARNING  2016-11-20 13:24:09,173 django.request      [line 152 ] Not Found: /restapi/arch/clusters/templates/2/versions/2/
+WARNING  2016-11-20 13:24:17,416 django.request      [line 152 ] Not Found: /restapi/arch/clusters/templates/2/versions/2/
+WARNING  2016-11-20 13:25:41,028 django.request      [line 152 ] Not Found: /restapi/arch/clusters/templates/2/versions/2/
+WARNING  2016-11-20 13:33:18,501 django.request      [line 152 ] Not Found: /restapi/arch/clusters/templates/2/versions/111/
+WARNING  2016-11-20 13:34:48,045 django.request      [line 152 ] Not Found: /restapi/arch/clusters/templates/2/versions/111/
+WARNING  2016-11-23 12:13:54,986 django.request      [line 152 ] Not Found: /arch/clusters/templates/2/versions/1/js/common/update.js
+WARNING  2016-11-23 12:13:55,419 django.request      [line 152 ] Not Found: /arch/clusters/templates/2/versions/1/js/common/update.js
+WARNING  2016-11-23 12:14:01,802 django.request      [line 152 ] Not Found: /arch/clusters/templates/2/versions/1/js/common/update.js
+ERROR    2016-11-23 14:33:23,658 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/cluster.py", line 41, in update
+    raise ValueError(validated_data)
+ValueError: {u'changes': u'\u5471\u5527\u5471\u5527\u5471\u5527'}
+ERROR    2016-11-23 15:34:43,063 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 189, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+ERROR    2016-11-23 18:39:37,388 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 189, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+ERROR    2016-11-23 18:41:06,218 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/cluster.py", line 41, in update
+    raise ValueError(self.initial_data)
+ValueError: <QueryDict: {u'changes': [u'\u5471\u5527\u5471\u5527\u5471\u5527'], u'host_model': [u'11']}>
+ERROR    2016-11-23 18:42:11,342 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/cluster.py", line 41, in update
+    raise ValueError(self.initial_data)
+ValueError: <QueryDict: {u'changes': [u'\u5471\u5527\u5471\u5527\u5471\u5527'], u'app_id': [u'2'], u'host_model': [u'11']}>
+ERROR    2016-11-23 18:43:47,456 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 74, in perform_update
+    serializer.save()
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 187, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/serializers/cluster.py", line 41, in update
+    raise ValueError(self.initial_data)
+ValueError: <QueryDict: {u'changes': [u'\u5471\u5527\u5471\u5527\u5471\u5527'], u'app_id': [u'2'], u'host_model': [u'11']}>
+ERROR    2016-11-23 19:27:10,160 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 68, in update
+    serializer = self.get_serializer(instance, data=request.data, partial=partial)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 110, in get_serializer
+    kwargs['context'] = self.get_serializer_context()
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 129, in get_serializer_context
+    raise ValueError(self.request.query_params)
+ValueError: <QueryDict: {}>
+ERROR    2016-11-23 19:28:21,539 django.request      [line 124 ] Internal Server Error: /restapi/arch/clusters/templates/2/versions/1/
+Traceback (most recent call last):
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = self.handle_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 434, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 471, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 289, in patch
+    return self.partial_update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 78, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 68, in update
+    serializer = self.get_serializer(instance, data=request.data, partial=partial)
+  File "/data/fmc/pycharm_workspase/omni/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 110, in get_serializer
+    kwargs['context'] = self.get_serializer_context()
+  File "/data/fmc/pycharm_workspase/omni/omni/apps/arch/views/cluster.py", line 129, in get_serializer_context
+    raise ValueError(self.kwargs)
+ValueError: {'cluster_template_id': u'2', 'version': u'1'}

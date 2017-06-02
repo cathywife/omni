@@ -1,0 +1,266 @@
+{% extends 'base/base_detail.html' %}
+{% load static %}
+
+{% block page_body_content_article %}
+  <div class="box box-primary">
+    <div class="box-header with-border">
+      <h3 class="box-title">{{ body_header_navigation.page }}: <strong id="id_cluster_template_name"></strong></h3>
+    </div>
+    <div class="box-body">
+        <div class="box box-solid">
+          <div class="box-header with-border">
+            <i class="fa fa-text-width"></i>
+
+            <h3 class="box-title">描  述</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+            </div>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <blockquote>
+              <pre id="id_cluster_template_description"></pre>
+            </blockquote>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <div class="box box-solid">
+          <div class="box-header with-border">
+            <h3 class="box-title">信 息</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <ul class="list-group col-md-6">
+              <li class="list-group-item">
+                <b>创建时间</b> <a class="pull-right" id="id_cluster_template_create_time"></a>
+              </li>
+              <li class="list-group-item">
+                <b>创建人</b> <a class="pull-right">543</a>
+              </li>
+            </ul>
+            <ul class="list-group col-md-6">
+              <li class="list-group-item">
+                <b>更新时间</b> <a class="pull-right" id="id_cluster_template_update_time"></a>
+              </li>
+              <li class="list-group-item">
+                <b>更新人</b> <a class="pull-right">543</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.box-body -->
+        </div>
+      <!-- TABLE: 发布状态版本 -->
+      <div class="box box-success">
+        <div class="box-header with-border">
+          <h3 class="box-title">发布状态版本</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+          </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div class="table-responsive">
+            <table id="{{ cluster_template_stable_version_table}}" class="table table-hover no-margin">
+              <thead>
+                <tr>
+                  <td class="col-md-2">版本号</td>
+                  <td>应用集群</td>
+                  <td class="col-md-2">更新时间</td>
+                  <td class="col-md-2"></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4" style="text-align: center">无数据</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.table-responsive -->
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer clearfix">
+          <a href="javascript:void(0)" class="btn btn-sm btn-success btn-flat pull-left">版本对比</a>
+            <ul id="{{ cluster_template_stable_version_table }}Pagination" class="pull-right no-margin">
+            </ul>
+        </div>
+        <!-- /.box-footer -->
+      </div>
+      <!-- /.box -->
+
+      <!-- TABLE: 版本列表 -->
+      <div class="box box-info">
+        <div class="box-header with-border">
+          <h3 class="box-title">版本列表</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+          </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div class="table-responsive">
+            <table id="{{ cluster_template_all_version_table }}" class="table table-hover no-margin">
+              <thead>
+                <tr>
+                  <td class="col-md-2">版本号</td>
+                  <td class="col-md-3">状 态</td>
+                  <td>更新时间</td>
+                  <td class="col-md-3"></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4" style="text-align: center">无数据</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.table-responsive -->
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer clearfix">
+          <button class="btn btn-sm btn-info btn-flat pull-left" id="add_cluster_template_version">增加新版本</button>
+          <ul id="{{ cluster_template_all_version_table }}Pagination" class="pull-right no-margin">
+          </ul>
+        </div>
+        <!-- /.box-footer -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.box-footer -->
+  </div>
+
+{% endblock %}
+
+{% block page_embed_body_js %}
+<script>
+
+function get_restapi_cluster_template_detail_url() {
+    return '{% url 'restapi-arch:cluster-template-detail' pk %}'
+}
+
+$(function () {
+  $.get(get_restapi_cluster_template_detail_url(), function (data) {
+    $('#id_cluster_template_name').text(data.name);
+    $('#id_cluster_template_description').text(data.description);
+    $('#id_cluster_template_create_time').text(data.create_time);
+    $('#id_cluster_template_update_time').text(data.update_time);
+  }).fail(function (response_obj, status) {
+        alert_failed_for_form(response_obj, status, clusters_templates_url, form_obj)
+    });
+});
+
+var $clusterTemplateStableVersionPagination = $('#{{ cluster_template_stable_version_table }}Pagination');
+
+pagination_wrapper({
+    pagination: $clusterTemplateStableVersionPagination,
+    dataSource: '{% url 'restapi-arch:cluster-template-version-list_create' cluster_template_id %}',
+    dataSourceData: {status: 3},
+    callback: function (data) {
+        var $tbody = $('#{{ cluster_template_stable_version_table }} tbody');
+        $tbody.children('tr').remove();
+        if (!data.length){
+            $tbody.append('<tr><td colspan="4" style="text-align: center">无数据</td></tr>');
+            return
+        }
+        $.each(data, function (i, objInfo) {
+            if (!objInfo){
+                return true
+            }
+            var td_list = [];
+            td_list.push(table_gen_td(objInfo, 'version'));
+            td_list.push(table_gen_td(objInfo, 'cluster'));
+            td_list.push(table_gen_td(objInfo, 'update_time'));
+            td_list.push('<td><a href="{% url "template-arch:cluster-template-list" %}' + {{ pk }} + '/versions/' + objInfo.id + '/" class="btn btn-primary btn-xs">编 辑</a></td>');
+
+            $tbody.append('<tr>' + td_list.join('') + ' </tr>')
+        });
+    }
+});
+
+var $clusterTemplateAllVersionPagination = $('#{{ cluster_template_all_version_table }}Pagination');
+
+var cluster_template_versions_restapi_url = "{% url 'restapi-arch:cluster-template-version-list_create' cluster_template_id %}";
+
+pagination_wrapper({
+    pagination: $clusterTemplateAllVersionPagination,
+    dataSource: cluster_template_versions_restapi_url,
+    callback: function (data) {
+        var $tbody = $('#{{ cluster_template_all_version_table }} tbody');
+        $tbody.children('tr').remove();
+        if (!data.length){
+            $tbody.append('<tr><td colspan="4" style="text-align: center">无数据</td></tr>');
+            return
+        }
+        $.each(data, function (i, objInfo) {
+            if (!objInfo){
+                return true
+            }
+            var td_list = [];
+            td_list.push(table_gen_td(objInfo, 'version'));
+            td_list.push(table_gen_td(objInfo, 'status', 'name'));
+            td_list.push(table_gen_td(objInfo, 'update_time'));
+            $tbody.append('<tr>' + td_list.join('') + ' </tr>')
+        });
+    }
+});
+
+
+$("#add_cluster_template_version").click(function () {
+  layer.open({
+    type: 1
+    ,title: '新增集群模板版本' //不显示标题栏
+    ,closeBtn: false
+    ,area: '500px;'
+    ,shade: 0.8
+    ,id: 'lay_for_add_cluster_template_version' //设定一个id，防止重复弹出
+    ,btn: ['确认新增', '取  消']
+    ,moveType: 1 //拖拽模式，0或者1
+    ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">' +
+                '<form id="AddClusterTemplateVersionForm">' +
+                  '<div class="form-group">' +
+                    '<label class="control-label" for="select_inherit_version_for_add">继承自:</label>' +
+                    '<select id="select_inherit_version_for_add" name="inherit-version" class="form-control"></select>' +
+                    '<p class="help-block">选择一个版本, 用于继承配置该版本配置至新版本中。若未指定则自动选择最新版本</p>' +
+                  '</div>' +
+                '</form>' +
+              '</div>'
+    ,success: function(layero){
+      var $select_inherit_version_for_add = $("#select_inherit_version_for_add");
+      $select_inherit_version_for_add.selectize(selectize_init_for_select(
+          {labelField: 'version', visibleField: 'status.name'},
+          {url: cluster_template_versions_restapi_url}
+          )
+      );
+      var form_obj = $("#AddClusterTemplateVersionForm");
+      var form_data = form_obj.serializeArray();
+      var post_data = $.each(form_data, function (index, field_obj) {
+          var data = {};
+          data[field_obj.name] = field_obj.value;
+          return data
+      });
+      var btn = layero.find('.layui-layer-btn');
+      btn.css('text-align', 'center');
+      btn.find('.layui-layer-btn0').click(function () {
+          $.post(cluster_template_versions_restapi_url, post_data,
+              function (data) {
+                  alert_success_for_form('成功!!', '增加集群模板版本成功!!', cluster_template_versions_restapi_url + data.id + '/',
+                      data.name, form_obj)
+              }).fail(function (response_obj, status) {
+                  alert_failed_for_form(response_obj, status, cluster_template_versions_restapi_url, form_obj)
+              });
+      });
+    }
+  });
+});
+
+
+</script>
+{% endblock %}

@@ -16,5 +16,6 @@ try:
     from omni.settings.test import *
     from omni.settings.pre import *
     from omni.settings.prod import *
+    from omni.settings.logging import *
 except ImportError:
     pass

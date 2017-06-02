@@ -1,29 +1,22 @@
 from django.conf.urls import include, url
-from .apps.backends import urls as omni_backends_urls
-from .apps.host_node import urls as omni_host_urls
-from djcelery import urls as djcelery_urls
-from asset import urls as asset_urls
+
+from .apps.arch import urls as omni_arch_urls
+from .apps.cmc import urls as omni_cmc_urls
 
 from . import views as omni_view
+from omni.libs.django.view.common import MatchByUrlTemplateView
 
 urlpatterns = [
-    url(r'^$|^index\.html$', omni_view.index),
-    url(r'^login\.html$', omni_view.login),
-    url(r'^logout\.htm$', omni_view.logout),
+    url(r'^$|^/*index\.html$', omni_view.index),
+    url(r'^/*login\.html$', omni_view.login),
+    url(r'^/*logout\.htm$', omni_view.logout),
 ]
 
+# arch for restful api
 urlpatterns += [
-    url(r'^backends/', include(omni_backends_urls))
-]
+    url(r'^/*restapi/+arch/+', include('omni.apps.arch.restapi_urls', namespace='restapi-arch', app_name='arch')),
+    url(r'^/*restapi/+cmc/+', include('omni.apps.cmc.restapi_urls', namespace='restapi-cmc', app_name='cmc')),
 
-urlpatterns += [
-    url(r'^asset/', include(asset_urls))
-]
-
-urlpatterns += [
-    url(r'^host/', include(omni_host_urls))
-]
-
-urlpatterns += [
-    url(r'^celery/', include(djcelery_urls))
+    url(r'^/*arch/+', include('omni.apps.arch.urls', namespace='template-arch', app_name='arch')),
+    url(r'^/*cmc/+', include('omni.apps.cmc.urls', namespace='template-cmc', app_name='cmc')),
 ]

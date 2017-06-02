@@ -11,7 +11,7 @@ import logging
 from omni.apps import ByIdentityResourceBaseMixin
 from omni.apps.host_group.models import HostGroupInfoModel
 from omni.apps.host_group.base import BaseHostGroup
-from omni.apps.host_node.mixin.template import HostNodeTemplateMixin
+from omni.apps.arch.mixin.template import HostNodeTemplateMixin
 
 
 log = logging.getLogger(__name__)
